@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                 docker stop portfolio-container || true
                 docker rm portfolio-container || true
-                docker run -d -p 8081:8081 --name portfolio-container portfolio-site
+                docker run -d -p 8081:8080 --name portfolio-container portfolio-site
                 '''
             }
         }
